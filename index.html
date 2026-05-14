@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Waste Management</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f4fdf7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: linear-gradient(135deg, #0f9b0f, #38ef7d);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 15px 0;
+    }
+
+    nav {
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: white;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #111;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  linear-gradient(135deg, #0f9b0f, #38ef7d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 30px;
+      background: white;
+      color: #0f9b0f;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #222;
+      color: white;
+    }
+
+    /* GENERAL SECTION */
+    section {
+      padding: 80px 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.7rem;
+      margin-bottom: 45px;
+      color: #0f9b0f;
+      font-weight: 800;
+    }
+
+    .section-text {
+      max-width: 950px;
+      margin: auto;
+      text-align: center;
+      font-size: 1.1rem;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: 0.4s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      color: #0f9b0f;
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .timeline-step {
+      background: white;
+      padding: 20px;
+      border-left: 6px solid #38ef7d;
+      border-radius: 8px;
+      box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+      font-size: 1.1rem;
+    }
+
+    /* TEAM */
+    .team {
+      text-align: center;
+      background: #e8fff0;
+      border-radius: 15px;
+      padding: 30px;
+    }
+
+    .team p {
+      font-size: 1.1rem;
+      margin: 8px 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0f9b0f;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+      margin-top: 40px;
+    }
+
+    /* ANIMATION */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav ul {
+        justify-content: center;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav>
+      <div class="logo">E-Waste</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#sources">Sources</a></li>
+        <li><a href="#effects">Effects</a></li>
+        <li><a href="#recycle">Recycling</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>E-Waste Management</h1>
+      <p>Building a Sustainable Future Through Responsible Electronics Disposal</p>
+      <p>Environmental Studies Project | SE Computer Engineering</p>
+      <a href="#about" class="btn">Explore Project</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">Introduction</h2>
+    <p class="section-text">
+      Electronic waste (E-waste) refers to discarded electrical and electronic devices such as computers,
+      laptops, mobile phones, televisions, batteries, and home appliances. Due to rapid technological growth,
+      e-waste is one of the fastest-growing waste streams globally. Improper disposal releases toxic substances
+      like lead, mercury, and cadmium, harming both the environment and human health.
+    </p>
+  </section>
+
+  <!-- SOURCES -->
+  <section id="sources">
+    <h2 class="section-title">Sources of E-Waste</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Household Waste</h3>
+        <p>Old smartphones, televisions, washing machines, chargers, and kitchen electronics.</p>
+      </div>
+
+      <div class="card">
+        <h3>Industrial Waste</h3>
+        <p>Manufacturing equipment, IT infrastructure, production devices, and machinery.</p>
+      </div>
+
+      <div class="card">
+        <h3>Commercial & Institutional</h3>
+        <p>Offices, banks, colleges, hospitals, and organizations generating outdated devices.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EFFECTS -->
+  <section id="effects">
+    <h2 class="section-title">Effects of E-Waste</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Environmental Damage</h3>
+        <p>Causes soil contamination, air pollution, and groundwater toxicity.</p>
+      </div>
+
+      <div class="card">
+        <h3>Health Hazards</h3>
+        <p>Leads to respiratory illness, skin disorders, neurological damage, and cancer risk.</p>
+      </div>
+
+      <div class="card">
+        <h3>Resource Loss</h3>
+        <p>Improper disposal wastes valuable metals like gold, silver, and copper.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECYCLING -->
+  <section id="recycle">
+    <h2 class="section-title">E-Waste Recycling Process</h2>
+    <div class="timeline">
+      <div class="timeline-step"><strong>Step 1:</strong> Collection from households, industries, and institutions.</div>
+      <div class="timeline-step"><strong>Step 2:</strong> Segregation into categories for proper handling.</div>
+      <div class="timeline-step"><strong>Step 3:</strong> Dismantling and manual separation of parts.</div>
+      <div class="timeline-step"><strong>Step 4:</strong> Shredding into smaller pieces.</div>
+      <div class="timeline-step"><strong>Step 5:</strong> Recovery of reusable metals and materials.</div>
+    </div>
+  </section>
+
+  <!-- SOLUTIONS -->
+  <section id="solutions">
+    <h2 class="section-title">Solutions & Recommendations</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Reduce</h3>
+        <p>Purchase durable, eco-friendly, and energy-efficient products.</p>
+      </div>
+
+      <div class="card">
+        <h3>Reuse</h3>
+        <p>Repair devices, donate, or resell usable electronics.</p>
+      </div>
+
+      <div class="card">
+        <h3>Recycle</h3>
+        <p>Use certified recycling centers and support proper disposal systems.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team">
+    <h2 class="section-title">Project Team</h2>
+    <div class="team">
+      <p>Sahil Bhosle</p>
+      <p>Omkar Chinchkar</p>
+      <p>Soham Bodhe</p>
+      <p>Sunny Abhang</p>
+      <p>Shubham Birajdar</p>
+      <p><strong>Guide:</strong> Prof. Amrapali Gaikwad</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 E-Waste Management Project | KJ College of Engineering & Management Research</p>
+  </footer>
+
+</body>
+</html>
