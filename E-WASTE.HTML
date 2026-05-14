@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Waste Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f4fdf7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f9b0f, #38ef7d);
+      color: white;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 90%;
+      margin: auto;
+    }
+
+    nav h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #222;
+    }
+
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1500&q=80') center/cover;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+      top: 0;
+      left: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #38ef7d;
+      color: #222;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+    }
+
+    section {
+      padding: 70px 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #0f9b0f;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #0f9b0f;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .timeline-step {
+      background: white;
+      padding: 20px;
+      border-left: 5px solid #38ef7d;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #0f9b0f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+
+      nav ul {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>E-Waste</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#sources">Sources</a></li>
+      <li><a href="#effects">Effects</a></li>
+      <li><a href="#recycle">Recycling</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h2>E-Waste Management</h2>
+    <p>Building a Sustainable Future Through Responsible Electronics Disposal</p>
+    <p>Project by: Sahil, Omkar, Soham, Sunny, Shubham</p>
+    <a href="#about" class="btn">Explore Project</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">Introduction</h2>
+  <p style="text-align:center; max-width:900px; margin:auto;">
+    E-waste refers to discarded electronic devices such as mobile phones, laptops, televisions, and batteries. 
+    Improper disposal causes pollution and health hazards due to toxic materials like lead, mercury, and cadmium.
+  </p>
+</section>
+
+<section id="sources">
+  <h2 class="section-title">Sources of E-Waste</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Household Waste</h3>
+      <p>Old phones, televisions, washing machines, chargers.</p>
+    </div>
+    <div class="card">
+      <h3>Industrial Waste</h3>
+      <p>Manufacturing units, IT hardware, production sectors.</p>
+    </div>
+    <div class="card">
+      <h3>Commercial Waste</h3>
+      <p>Banks, offices, schools, hospitals, institutions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="effects">
+  <h2 class="section-title">Effects of E-Waste</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Environmental Impact</h3>
+      <p>Soil contamination, water pollution, and air pollution.</p>
+    </div>
+    <div class="card">
+      <h3>Health Hazards</h3>
+      <p>Respiratory issues, nervous system damage, skin diseases.</p>
+    </div>
+    <div class="card">
+      <h3>Economic Loss</h3>
+      <p>Loss of reusable materials like gold, copper, and silver.</p>
+    </div>
+  </div>
+</section>
+
+<section id="recycle">
+  <h2 class="section-title">Recycling Process</h2>
+  <div class="timeline">
+    <div class="timeline-step"><strong>Step 1:</strong> Collection of E-Waste</div>
+    <div class="timeline-step"><strong>Step 2:</strong> Segregation by category</div>
+    <div class="timeline-step"><strong>Step 3:</strong> Dismantling components</div>
+    <div class="timeline-step"><strong>Step 4:</strong> Shredding into smaller parts</div>
+    <div class="timeline-step"><strong>Step 5:</strong> Material Recovery</div>
+  </div>
+</section>
+
+<section id="solutions">
+  <h2 class="section-title">Solutions</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Reduce</h3>
+      <p>Buy durable and energy-efficient electronics.</p>
+    </div>
+    <div class="card">
+      <h3>Reuse</h3>
+      <p>Repair, donate, or resell old devices.</p>
+    </div>
+    <div class="card">
+      <h3>Recycle</h3>
+      <p>Use authorized recycling centers.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 E-Waste Management Project | KJ College of Engineering</p>
+</footer>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
